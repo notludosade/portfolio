@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Archive — Lucas Hu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="archive.css" />
+</head>
+<body>
+
+  <canvas id="arc-canvas"></canvas>
+
+  <nav id="arc-nav">
+    <a href="index.html" class="nav-back mono">← Lucas Hu</a>
+    <span class="nav-title mono">// archive</span>
+  </nav>
+
+  <!-- HERO HEADER -->
+  <header class="arc-hero">
+    <div class="arc-hero-inner">
+      <p  class="arc-eyebrow mono cascade-left" style="--d:60ms">// the complete record</p>
+      <h1 class="arc-title reveal-clip"          style="--d:200ms">The Archive</h1>
+      <p  class="arc-subtitle focus-pull"         style="--d:400ms">Every project, internship, award &amp; event — documented.</p>
+      <div class="arc-scroll-cue mono focus-pull" style="--d:600ms">↓ scroll to explore</div>
+    </div>
+    <div class="arc-hero-glow"></div>
+  </header>
+
+  <!-- ARCHIVE MAIN -->
+  <main class="arc-main">
+
+    <div class="acc-group cascade-left" id="acc-projects"    style="--d:0ms">
+      <button class="acc-header" aria-expanded="false">
+        <span class="acc-num mono">01</span>
+        <span class="acc-label">Projects</span>
+        <span class="acc-count mono" id="cnt-projects">—</span>
+        <span class="acc-arrow">↓</span>
+      </button>
+      <div class="acc-body">
+        <div class="acc-entry-list" id="archive-projects"></div>
+      </div>
+    </div>
+
+    <div class="acc-group cascade-left" id="acc-internships" style="--d:70ms">
+      <button class="acc-header" aria-expanded="false">
+        <span class="acc-num mono">02</span>
+        <span class="acc-label">Internships</span>
+        <span class="acc-count mono" id="cnt-internships">—</span>
+        <span class="acc-arrow">↓</span>
+      </button>
+      <div class="acc-body">
+        <div class="acc-entry-list" id="archive-internships"></div>
+      </div>
+    </div>
+
+    <div class="acc-group cascade-left" id="acc-awards"      style="--d:140ms">
+      <button class="acc-header" aria-expanded="false">
+        <span class="acc-num mono">03</span>
+        <span class="acc-label">Awards</span>
+        <span class="acc-count mono" id="cnt-awards">—</span>
+        <span class="acc-arrow">↓</span>
+      </button>
+      <div class="acc-body">
+        <div class="acc-entry-list" id="archive-awards"></div>
+      </div>
+    </div>
+
+    <div class="acc-group cascade-left" id="acc-events"      style="--d:210ms">
+      <button class="acc-header" aria-expanded="false">
+        <span class="acc-num mono">04</span>
+        <span class="acc-label">Events</span>
+        <span class="acc-count mono" id="cnt-events">—</span>
+        <span class="acc-arrow">↓</span>
+      </button>
+      <div class="acc-body">
+        <div class="acc-entry-list" id="archive-events"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="data.js"></script>
+  <script src="archive.js"></script>
+</body>
+</html>

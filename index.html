@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucas Hu — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Atmosphere layers -->
+  <div class="atm-layer atm-dusk active" id="atm-dusk"></div>
+  <div class="atm-layer atm-early"       id="atm-early"></div>
+  <div class="atm-layer atm-midnight"    id="atm-midnight"></div>
+  <div class="atm-layer atm-void"        id="atm-void"></div>
+
+  <!-- NAV -->
+  <nav id="main-nav">
+    <span class="nav-logo">Lucas<span class="nav-dot">.</span></span>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#achievements" class="nav-link">Work</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="archive.html" class="nav-cta mono">Archive →</a>
+  </nav>
+
+  <!-- ══ HERO ═════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-inner">
+
+      <!-- B: focus-pull, staggered delays -->
+      <div class="hero-label focus-pull" style="--d:0ms">
+        <span class="hero-label-dot"></span>
+        <span class="mono">AVAILABLE FOR OPPORTUNITIES</span>
+      </div>
+
+      <h1 class="hero-name">
+        <!-- clip-path reveal — most impactful for the name -->
+        <span class="word reveal-clip" style="--d:120ms">Lucas</span>
+        <span class="word reveal-clip accent-word" style="--d:260ms">Hu</span>
+      </h1>
+
+      <p class="hero-tagline focus-pull" style="--d:420ms">
+        Mastermind &nbsp;·&nbsp; Computer Science &nbsp;·&nbsp; AI Enthusiast
+      </p>
+
+      <div class="hero-tags focus-pull" style="--d:560ms">
+        <span class="tag">Computer Science</span>
+        <span class="tag">Maryland, United States</span>
+        <span class="tag">John 15:5</span>
+      </div>
+
+      <div class="hero-actions focus-pull" style="--d:700ms">
+        <a href="#achievements" class="btn-primary">
+          <span class="btn-text">View My Work</span>
+          <span class="btn-shine"></span>
+        </a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+
+      <div class="hero-scroll-hint focus-pull" style="--d:950ms">
+        <span class="mono">scroll to explore</span>
+        <span class="scroll-line"></span>
+      </div>
+    </div>
+
+    <div class="hero-globe" id="hero-globe">
+      <div class="globe-glow"></div>
+      <div class="globe-glow globe-glow-2"></div>
+    </div>
+  </section>
+
+  <!-- ══ MARQUEE TICKER ══════════════════════════ -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item">Computer Science</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">AI & Machine Learning</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Creative Development</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Minecraft Dev</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Web Engineering</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Digital Design</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Computer Science</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">AI & Machine Learning</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Creative Development</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Minecraft Dev</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Web Engineering</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Digital Design</span><span class="marquee-sep">✦</span>
+    </div>
+  </div>
+
+  <!-- ══ ABOUT ═══════════════════════════════════ -->
+  <section id="about">
+    <div class="section-inner">
+
+      <!-- C: eyebrow slides in from left -->
+      <div class="section-eyebrow cascade-left">
+        <span class="eyebrow-num mono">01</span>
+        <span class="mono section-label">// about_me</span>
+      </div>
+
+      <!-- B: title pulls into focus -->
+      <h2 class="section-title focus-pull" style="--d:80ms">A bit about me</h2>
+
+      <div class="about-grid">
+        <!-- C: text block slides from left -->
+        <div class="about-text cascade-left" style="--d:120ms">
+          <p>Hey — I'm <strong>Notludosade</strong>(don't mind the "Not").I am currently 15 years old and having a generational addiction to the era of AI. The limits it brings could one day be endless. I love doing what I do right now and it drives me to be the best version of myself.</p>
+          <p>The output of what I do is the thing that drives me to do more because with results showing, depending whether it is good or bad, determines my next course of action. I love creating fun, formal, and casual projects that help me and others.</p>
+          <p>Outside of coding, I usually play Minecraft with friends. I'm working toward becoming a developer of my own mods and add-ons in both Java and Bedrock Edition.</p>
+        </div>
+
+        <!-- C: stats column slides from right -->
+        <div class="stats-column">
+          <div class="stat-card cascade-right" style="--d:150ms">
+            <span class="stat-num mono" data-count="0">0</span>
+            <span class="stat-bar"><span class="stat-bar-fill"></span></span>
+            <span class="stat-label">Projects shipped</span>
+          </div>
+          <div class="stat-card cascade-right" style="--d:260ms">
+            <span class="stat-num mono" data-count="0">0</span>
+            <span class="stat-bar"><span class="stat-bar-fill"></span></span>
+            <span class="stat-label">Internships completed</span>
+          </div>
+          <div class="stat-card cascade-right" style="--d:370ms">
+            <span class="stat-num mono" data-count="0">0</span>
+            <span class="stat-bar"><span class="stat-bar-fill"></span></span>
+            <span class="stat-label">Awards & recognitions</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ ACHIEVEMENTS ═════════════════════════════ -->
+  <section id="achievements">
+    <div class="section-inner">
+
+      <!-- C: eyebrow from left -->
+      <div class="section-eyebrow cascade-left">
+        <span class="eyebrow-num mono">02</span>
+        <span class="mono section-label">// achievements</span>
+      </div>
+
+      <div class="section-title-row">
+        <!-- B: title pulls into focus -->
+        <h2 class="section-title focus-pull" style="--d:80ms">What I've been up to</h2>
+        <!-- C: archive link from right -->
+        <a href="archive.html" class="btn-ghost mono archive-link cascade-right" style="--d:140ms">Full Archive →</a>
+      </div>
+
+      <!-- C: tabs row from left -->
+      <div class="tabs cascade-left" style="--d:160ms" role="tablist">
+        <button class="tab active" data-tab="projects"     role="tab">Projects</button>
+        <button class="tab"        data-tab="internships"  role="tab">Internships</button>
+        <button class="tab"        data-tab="awards"       role="tab">Awards</button>
+        <button class="tab"        data-tab="events"       role="tab">Events</button>
+      </div>
+
+      <div class="tab-panel active" id="tab-projects">
+        <div class="card-grid" id="render-projects"></div>
+      </div>
+      <div class="tab-panel" id="tab-internships">
+        <div class="timeline" id="render-internships"></div>
+      </div>
+      <div class="tab-panel" id="tab-awards">
+        <div class="list-stack" id="render-awards"></div>
+      </div>
+      <div class="tab-panel" id="tab-events">
+        <div class="list-stack" id="render-events"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══════════════════════════════════ -->
+  <section id="contact">
+    <div class="section-inner contact-inner">
+
+      <!-- B: contact is centered — focus-pull everything -->
+      <div class="section-eyebrow focus-pull" style="justify-content:center">
+        <span class="eyebrow-num mono">03</span>
+        <span class="mono section-label">// contact</span>
+      </div>
+      <h2 class="section-title contact-title focus-pull" style="--d:80ms">Let's talk</h2>
+      <p class="contact-sub focus-pull" style="--d:160ms">Personal Phone (+1)227-277-2326</p>
+      <div class="contact-links focus-pull" style="--d:260ms">
+        <a href="mailto:hulukrs@gmail.com" class="btn-primary">
+          <span class="btn-text">Email me</span>
+          <span class="btn-shine"></span>
+        </a>
+        <a href="https://github.com/[username]"      class="btn-ghost mono">GitHub</a>
+        <a href="https://linkedin.com/in/[username]" class="btn-ghost mono">LinkedIn</a>
+        <a href="https://discord.gg/ZdxtabyZEv"      class="btn-ghost mono">Discord</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ═══════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">Lucas Hu</span>
+      <span class="mono muted footer-copy">built with curiosity · 2025</span>
+      <span class="mono muted footer-copy">John 15:5</span>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
