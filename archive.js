@@ -204,8 +204,8 @@ function buildProjects(container) {
   }
   container.innerHTML = d.map(p => {
     const sl = (p.status || '').toLowerCase();
-    const statusCls = sl.includes('live') || sl.includes('done') || sl.includes('current')
-      ? 'live' : sl.includes('wip') || sl.includes('progress') ? 'wip' : 'paused';
+    const statusCls = sl.includes('live') || sl.includes('done') || sl.includes('current') || sl.includes('completed')
+      ? 'live' : sl.includes('wip') || sl.includes('progress') || sl.includes('planned') ? 'wip' : 'paused';
     const tags  = (p.tags  || []).map(t => `<span class="arc-entry-tag">${t}</span>`).join('');
     const links = [
       p.links?.github ? `<a href="${p.links.github}" class="arc-entry-link" target="_blank">→ GitHub</a>` : '',

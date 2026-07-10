@@ -31,8 +31,8 @@ function renderProjects() {
       p.links?.live   ? `<a href="${p.links.live}"   style="font-family:var(--font-mono);font-size:0.76rem;color:var(--magenta);text-decoration:none;" target="_blank">→ Live</a>` : ''
     ].filter(Boolean).join('<span style="margin:0 6px;color:var(--muted)">·</span>');
     const sl  = (p.status || '').toLowerCase();
-    const cls = sl.includes('live') || sl.includes('done') || sl.includes('current') ? 'live'
-               : sl.includes('wip') || sl.includes('progress') ? 'wip' : 'paused';
+    const cls = sl.includes('live') || sl.includes('done') || sl.includes('current') || sl.includes('completed') ? 'live'
+               : sl.includes('wip') || sl.includes('progress') || sl.includes('planned') ? 'wip' : 'paused';
     // C: odd cards from left, even cards from right
     const animCls = i % 2 === 0 ? 'cascade-left' : 'cascade-right';
     return `<div class="proj-card ${animCls}" style="--d:${i * 55}ms">
