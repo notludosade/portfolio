@@ -1,13 +1,10 @@
 {
-  "name": "project-v2",
+  "name": "lucas-hu-portfolio",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
+  "description": "Lucas Hu — personal portfolio site",
+  "author": "Lucas Hu",
   "license": "ISC",
-  "type": "commonjs"
+  "scripts": {
+    "build": "echo 'Static site — no build step'"
+  }
 }
