@@ -12,18 +12,18 @@ const DATA = {
   projects: [
     {
       year: "2026",
-      status: "Current Project",
-      name: "Dashboard Creation with Power BI",
-      description: "In this project, I am trying to collect data and put it all into a dashboard for higher-ups to view.",
-      tags: ["Business", "Data"],
+      status: "Completed",
+      name: "SAT AI",
+      description: "In this project, I have created a tool where people can use this to construct a study plan for them. (Most likely more development near in the future).",
+      tags: ["Education"],
       links: { github: "#", live: null }
     },
     {
-      year: null,
-      status: null,
-      name: null,
-      description: null,
-      tags: [],
+      year: "2026,
+      status: "Planned",
+      name: "STEM+",
+      description: "If you know, you know. This tool would help people learning STEM courses enhance their skills with practice problems, application-based problems, and more.",
+      tags: ["Education"],
       links: {}
     },
     {
