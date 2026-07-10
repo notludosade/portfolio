@@ -24,23 +24,28 @@ const animObserver = new IntersectionObserver(entries => {
 function renderProjects() {
   const el = document.getElementById('render-projects');
   if (!el) return;
-  el.innerHTML = DATA.projects.map((p, i) => {
+  // Main page shows only active projects — completed/done ones live in the archive
+  const active = DATA.projects.filter(p => {
+    if (!p.name) return false;
+    const sl = (p.status || '').toLowerCase();
+    return !sl.includes('completed') && !sl.includes('done');
+  });
+  el.innerHTML = active.map((p, i) => {
     const tags  = (p.tags || []).map(t => `<span class="card-tag">${t}</span>`).join('');
     const links = [
       p.links?.github ? `<a href="${p.links.github}" style="font-family:var(--font-mono);font-size:0.76rem;color:var(--text-dim);text-decoration:none;" target="_blank">→ GitHub</a>` : '',
       p.links?.live   ? `<a href="${p.links.live}"   style="font-family:var(--font-mono);font-size:0.76rem;color:var(--magenta);text-decoration:none;" target="_blank">→ Live</a>` : ''
     ].filter(Boolean).join('<span style="margin:0 6px;color:var(--muted)">·</span>');
     const sl  = (p.status || '').toLowerCase();
-    const cls = sl.includes('live') || sl.includes('done') || sl.includes('current') || sl.includes('completed') ? 'live'
+    const cls = sl.includes('live') || sl.includes('current') ? 'live'
                : sl.includes('wip') || sl.includes('progress') || sl.includes('planned') ? 'wip' : 'paused';
-    // C: odd cards from left, even cards from right
     const animCls = i % 2 === 0 ? 'cascade-left' : 'cascade-right';
     return `<div class="proj-card ${animCls}" style="--d:${i * 55}ms">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
         <span class="card-status ${cls}">${p.status || 'TBD'}</span>
         <span style="font-family:var(--font-mono);font-size:0.70rem;color:var(--muted)">${p.year ?? '—'}</span>
       </div>
-      <h3 class="card-title">${p.name ?? 'Coming soon'}</h3>
+      <h3 class="card-title">${p.name}</h3>
       <p class="card-desc">${p.description ?? 'Details coming soon.'}</p>
       ${tags  ? `<div class="card-tags-row">${tags}</div>` : ''}
       ${links ? `<div style="margin-top:12px;display:flex;gap:6px;align-items:center">${links}</div>` : ''}
@@ -609,7 +614,7 @@ function animCount(el, target, ms = 1100) {
 
 function populateStats() {
   const counts = [
-    DATA.projects?.filter(p => p.name).length    || 0,
+    DATA.projects?.filter(p => p.name && (s => s.includes('completed') || s.includes('done'))((p.status||'').toLowerCase())).length || 0,
     DATA.internships?.filter(i => i.role).length  || 0,
     DATA.awards?.filter(a => a.name).length       || 0,
   ];
