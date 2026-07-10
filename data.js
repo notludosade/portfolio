@@ -24,7 +24,7 @@ const DATA = {
       name: "STEM+",
       description: "If you know, you know. This tool would help people learning STEM courses enhance their skills with practice problems, application-based problems, and more.",
       tags: ["Education"],
-      links: {}
+      links: {live: "https://portfolio-ocwr.vercel.app/"}
     },
     {
       year: null,
