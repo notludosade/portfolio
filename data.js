@@ -19,7 +19,7 @@ const DATA = {
       links: { github: "#", live: null }
     },
     {
-      year: "2026,
+      year: "2026",
       status: "Planned",
       name: "STEM+",
       description: "If you know, you know. This tool would help people learning STEM courses enhance their skills with practice problems, application-based problems, and more.",
