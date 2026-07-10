@@ -196,11 +196,11 @@ function escAttr(str) {
 }
 
 function buildProjects(container) {
-  const d = DATA.projects || [];
+  // Show all named projects unless explicitly excluded with archive: false
+  const d = (DATA.projects || []).filter(p => p.name && p.archive !== false);
   const countEl = document.getElementById('cnt-projects');
   if (countEl) {
-    const n = d.filter(p => p.name).length;
-    countEl.textContent = `${n} ${n === 1 ? 'entry' : 'entries'}`;
+    countEl.textContent = `${d.length} ${d.length === 1 ? 'entry' : 'entries'}`;
   }
   container.innerHTML = d.map(p => {
     const sl = (p.status || '').toLowerCase();
@@ -211,11 +211,11 @@ function buildProjects(container) {
       p.links?.github ? `<a href="${p.links.github}" class="arc-entry-link" target="_blank">→ GitHub</a>` : '',
       p.links?.live   ? `<a href="${p.links.live}"   class="arc-entry-link" target="_blank">→ Live</a>`   : '',
     ].filter(Boolean).join('');
-    return `<div class="arc-entry${!p.name ? ' placeholder' : ''}">
+    return `<div class="arc-entry">
       <div class="arc-entry-year" data-print="${escAttr(p.year ?? '—')}"></div>
       <div class="arc-entry-body">
         ${p.status ? `<span class="arc-entry-status ${statusCls}">${p.status}</span>` : ''}
-        <div class="arc-entry-title">${p.name ?? 'Coming soon'}</div>
+        <div class="arc-entry-title">${p.name}</div>
         ${p.description ? `<div class="arc-entry-desc" data-print="${escAttr(p.description)}"></div>` : ''}
         ${tags  ? `<div class="arc-entry-tags">${tags}</div>`   : ''}
         ${links ? `<div class="arc-entry-links">${links}</div>` : ''}

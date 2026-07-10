@@ -3,8 +3,9 @@
 //  Edit here — both index.html and archive.html
 //  update automatically.
 //
-//  Set any field to null to show "Scheduled to
-//  be Updated" as a placeholder.
+//  Projects: every entry with a name shows in
+//  the archive automatically. To hide one, add:
+//    archive: false
 // ─────────────────────────────────────────────
 
 const DATA = {
