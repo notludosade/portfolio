@@ -17,7 +17,7 @@ const DATA = {
       name: "SAT AI",
       description: "In this project, I have created a tool where people can use this to construct a study plan for them. (Most likely more development near in the future).",
       tags: ["Education"],
-      links: { github: "#", live: null }
+      links: { live: "https://homepage-betav-2.vercel.app/" }
     },
     {
       year: "2026",
